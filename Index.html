@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KS Multimarcas AJU</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">KS Multimarcas AJU</div>
+
+    <div class="icons-header">
+        <!-- CARRINHO -->
+        <div class="cart-container">
+            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+            <span id="cartCount">0</span>
+        </div>
+
+        <!-- MENU HAMBURGUER -->
+      <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    </div>
+
+    <nav id="menu">
+        <a href="#">Início</a>
+        <a href="#">Masculino</a>
+        <a href="#">Feminino</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<!-- FILTROS -->
+<section class="filtros">
+    <select id="filtroGenero">
+        <option value="todos">Todos</option>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="unissex">unissex</option>
+    </select>
+
+    <select id="filtroNumero">
+        <option value="todos">Numeração</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+    </select>
+</section>
+
+<!-- PRODUTOS -->
+<main class="produtos">
+<div class="card" data-genero="unissex">
+    <img src="tenismasculino.jpg" alt="Tênis Unissex">
+    <h3>Tênis Lifestyle</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+    </select>
+
+    <button class="btn-carrinho"
+        data-nome="Tênis Lifestyle"
+        data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+
+    <div class="card" data-genero="feminino" data-numero="38">
+        <img src="tenisfeminino.jpg" alt="Tênis Feminino">
+        <h3>Tênis Casual</h3>
+        <p>Numeração: 38</p>
+        <span>Feminino</span>
+
+        <button class="btn-carrinho"
+            data-nome="Tênis Casual"
+            data-numero="38"
+            data-genero="Feminino">
+            Adicionar ao carrinho
+        </button>
+    </div>
+<div class="card" data-genero="unissex">
+    <img src="tenisunissex2.jpg" alt="Tênis Unissex">
+    <h3>Tênis Branco Unissex</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+    </select>
+
+    <button class="btn-carrinho"
+        data-nome="Tênis Lifestyle"
+        data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+<div class="card" data-genero="unissex">
+    <img src="tenispretounissex.jpg" alt="Tênis Unissex">
+    <h3>Tênis preto Unissex</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+    </select>
+
+    <button class="btn-carrinho"
+        data-nome="Tênis Lifestyle"
+        data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+</main>
+<!-- CARRINHO LATERAL -->
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h3>Seu carrinho</h3>
+        <button id="closeCart">✖</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+        <button id="consultarBtn">Consultar disponibilidade</button>
+    </div>
+</div>
+<!-- BOTÃO WHATSAPP -->
+<a href="https://wa.me/557999295629" class="whatsapp" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<footer>
+    <p>© 2026 KS Multimarcas AJU</p>
+    <p>Todos os direitos reservados</p>
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>

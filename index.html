@@ -2,9 +2,30 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KS Multimarcas AJU</title>
 
+    <!-- SEO LOCAL -->
+    <title>Tênis em Aracaju | KS Multimarcas AJU</title>
+    <meta name="description" content="Loja de tênis em Aracaju SE. Tênis masculinos, femininos e unissex. Consulte disponibilidade pelo WhatsApp. KS Multimarcas AJU.">
+    <meta name="keywords" content="tênis em Aracaju, loja de tênis Aracaju, tênis masculino Aracaju, tênis feminino Aracaju, tênis unissex Aracaju, multimarcas Aracaju">
+    <meta name="author" content="KS Multimarcas AJU">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO AVANÇADO -->
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.ksmultimarcasaju.com.br/">
+
+<!-- OPEN GRAPH -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tênis em Aracaju | KS Multimarcas AJU">
+<meta property="og:description" content="Loja de tênis em Aracaju SE. Modelos masculinos, femininos e unissex. Consulte disponibilidade pelo WhatsApp.">
+<meta property="og:url" content="https://www.ksmultimarcasaju.com.br/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://www.ksmultimarcasaju.com.br/preview.jpg">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tênis em Aracaju | KS Multimarcas AJU">
+<meta name="twitter:description" content="Loja de tênis em Aracaju SE. Atendimento rápido via WhatsApp.">
+<meta name="twitter:image" content="https://www.ksmultimarcasaju.com.br/preview.jpg">
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -14,38 +35,46 @@
 <body>
 
 <header>
+  <h1 style="position:absolute; left:-9999px;">
+Loja de tênis em Aracaju SE – KS Multimarcas AJU
+</h1>
+
+<section style="position:absolute; left:-9999px;">
+  <p>
+    A KS Multimarcas AJU é uma loja especializada em tênis em Aracaju SE,
+    oferecendo modelos masculinos, femininos e unissex.
+    Trabalhamos com revenda, por isso a disponibilidade de numeração é consultada
+    diretamente pelo WhatsApp.
+  </p>
+</section>
     <div class="logo">KS Multimarcas AJU</div>
 
     <div class="icons-header">
-        <!-- CARRINHO -->
         <div class="cart-container">
             <i class="fa-solid fa-cart-shopping cart-icon"></i>
             <span id="cartCount">0</span>
         </div>
 
-        <!-- MENU HAMBURGUER -->
-      <div class="menu-toggle" id="menuToggle">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
     </div>
 
     <nav id="menu">
         <a href="#">Início</a>
         <a href="#">Masculino</a>
         <a href="#">Feminino</a>
+        <a href="#">Unissex</a>
         <a href="#">Contato</a>
     </nav>
 </header>
 
-<!-- FILTROS -->
 <section class="filtros">
     <select id="filtroGenero">
         <option value="todos">Todos</option>
         <option value="masculino">Masculino</option>
         <option value="feminino">Feminino</option>
-        <option value="unissex">unissex</option>
+        <option value="unissex">Unissex</option>
     </select>
 
     <select id="filtroNumero">
@@ -60,113 +89,622 @@
     </select>
 </section>
 
-<!-- PRODUTOS -->
 <main class="produtos">
+
+<!-- ===== UNISSEX (15) ===== -->
+<!-- 001 a 015 -->
+<!-- exemplo -->
 <div class="card" data-genero="unissex">
-    <img src="tenismasculino.jpg" alt="Tênis Unissex">
-    <h3>Tênis Lifestyle</h3>
+    <img src="tenis-001.jpg" alt="Tênis unissex Linha Select 001 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 001</h3>
 
     <select class="select-numero">
         <option value="">Escolha o número</option>
-        <option value="36">36</option>
-        <option value="37">37</option>
-        <option value="38">38</option>
-        <option value="39">39</option>
-        <option value="40">40</option>
-        <option value="41">41</option>
-        <option value="42">42</option>
-        <option value="43">43</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
     </select>
 
-    <button class="btn-carrinho"
-        data-nome="Tênis Lifestyle"
-        data-genero="Unissex">
-        Adicionar ao carrinho
-    </button>
-</div>
-
-    <div class="card" data-genero="feminino" data-numero="38">
-        <img src="tenisfeminino.jpg" alt="Tênis Feminino">
-        <h3>Tênis Casual</h3>
-        <p>Numeração: 38</p>
-        <span>Feminino</span>
-
-        <button class="btn-carrinho"
-            data-nome="Tênis Casual"
-            data-numero="38"
-            data-genero="Feminino">
-            Adicionar ao carrinho
-        </button>
-    </div>
-<div class="card" data-genero="unissex">
-    <img src="tenisunissex2.jpg" alt="Tênis Unissex">
-    <h3>Tênis Branco Unissex</h3>
-
-    <select class="select-numero">
-        <option value="">Escolha o número</option>
-        <option value="36">36</option>
-        <option value="37">37</option>
-        <option value="38">38</option>
-        <option value="39">39</option>
-        <option value="40">40</option>
-        <option value="41">41</option>
-        <option value="42">42</option>
-        <option value="43">43</option>
-    </select>
-
-    <button class="btn-carrinho"
-        data-nome="Tênis Lifestyle"
-        data-genero="Unissex">
+    <button class="btn-carrinho" data-nome="Linha Select · 001" data-genero="Unissex"
+          data-genero="Feminino"
+          data-genero="Masculino">
         Adicionar ao carrinho
     </button>
 </div>
 <div class="card" data-genero="unissex">
-    <img src="tenispretounissex.jpg" alt="Tênis Unissex">
-    <h3>Tênis preto Unissex</h3>
+    <img src="tenis-002.jpg" alt="Tênis unissex Linha Select 002 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 002</h3>
 
     <select class="select-numero">
         <option value="">Escolha o número</option>
-        <option value="36">36</option>
-        <option value="37">37</option>
-        <option value="38">38</option>
-        <option value="39">39</option>
-        <option value="40">40</option>
-        <option value="41">41</option>
-        <option value="42">42</option>
-        <option value="43">43</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
     </select>
 
-    <button class="btn-carrinho"
-        data-nome="Tênis Lifestyle"
-        data-genero="Unissex">
+    <button class="btn-carrinho" data-nome="Linha Select · 002" data-genero="Unissex"
+          data-genero="Feminino"
+          data-genero="Masculino">
+      Adicionar ao carrinho
+    </button>
+</div>
+
+<div class="card" data-genero="unissex">
+    <img src="tenis-003.jpg" alt="Tênis unissex Linha Select 003 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 003</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 003" data-genero="Unissex">
         Adicionar ao carrinho
     </button>
 </div>
+
+<div class="card" data-genero="unissex"
+data-genero="Feminino"
+          data-genero="Masculino">
+    <img src="tenis-004.jpg" alt="Tênis unissex Linha Select 001 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 004</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 004" data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+<div class="card" data-genero="unissex"
+data-genero="Feminino"
+          data-genero="Masculino">
+    <img src="tenis-005.jpg" alt="Tênis unissex Linha Select 005 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 005</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 005" data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+<div class="card" data-genero="unissex"
+data-genero="Feminino"
+          data-genero="Masculino">
+    <img src="tenis-006.jpg" alt="Tênis unissex Linha Select 006 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 006</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 006" data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+<div class="card" data-genero="unissex"
+data-genero="Feminino"
+          data-genero="Masculino">
+    <img src="tenis-007.jpg" alt="Tênis unissex Linha Select 007 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 007</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 007" data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+
+<div class="card" data-genero="unissex"
+data-genero="Feminino"
+          data-genero="Masculino">
+    <img src="tenis-008.jpg" alt="Tênis unissex Linha Select 008 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 008</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 008" data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+
+<div class="card" data-genero="unissex"
+  data-genero="Feminino"
+          data-genero="Masculino">
+    <img src="tenis-009.jpg" alt="Tênis unissex Linha Select 009 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 009</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 009" data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+
+<div class="card" data-genero="unissex"
+data-genero="Feminino"
+          data-genero="Masculino">
+    <img src="tenis-010.jpg" alt="Tênis unissex Linha Select 010 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 010</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 010" data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+
+<div class="card" data-genero="unissex"
+data-genero="Feminino"
+          data-genero="Masculino">
+    <img src="tenis-011.jpg" alt="Tênis unissex Linha Select 011 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 011</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 011" data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+
+<div class="card" data-genero="unissex"
+data-genero="Feminino"
+          data-genero="Masculino">
+    <img src="tenis-012.jpg" alt="Tênis unissex Linha Select 012 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 012</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 012" data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+
+<div class="card" data-genero="unissex"
+data-genero="Feminino"
+          data-genero="Masculino">
+    <img src="tenis-013.jpg" alt="Tênis unissex Linha Select 013 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 013</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 013" data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+
+<div class="card" data-genero="unissex"
+data-genero="Feminino"
+          data-genero="Masculino">
+    <img src="tenis-014.jpg" alt="Tênis unissex Linha Select 014 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 014</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 014" data-genero="Unissex">
+        Adicionar ao carrinho
+    </button>
+</div>
+
+<div class="card" data-genero="unissex"
+data-genero="Feminino"
+          data-genero="Masculino">
+    <img src="tenis-015.jpg" alt="Tênis unissex Linha Select 015 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 015</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>37</option><option>38</option><option>39</option>
+        <option>40</option><option>41</option><option>42</option><option>43</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 015" data-genero="Unissex"
+    data-genero="Feminino"
+          data-genero="Masculino">
+      Adicionar ao carrinho
+    </button>
+</div>
+<!-- ===== MASCULINO 018–050 ===== -->
+<!-- ===== FEMININO (2) ===== -->
+<div class="card" data-genero="feminino">
+    <img src="tenis-016.jpg" alt="Tênis feminino Linha Select 016 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 016</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>36</option><option>37</option><option>38</option><option>39</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 016" data-genero="Feminino">
+        Adicionar ao carrinho
+    </button>
+</div>
+
+<div class="card" data-genero="feminino">
+    <img src="tenis-017.jpg" alt="Tênis feminino Linha Select 017 à venda em Aracaju SE KS Multimarcas">
+    <h3>Linha Select · 017</h3>
+
+    <select class="select-numero">
+        <option value="">Escolha o número</option>
+        <option>36</option><option>37</option><option>38</option><option>39</option>
+    </select>
+
+    <button class="btn-carrinho" data-nome="Linha Select · 017" data-genero="Feminino">
+        Adicionar ao carrinho
+    </button>
+</div>
+<div class="card" data-genero="masculino">
+<img src="tenis-018.jpg" alt="Tênis masculino Linha Select 018 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 018</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 018" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-019.jpg" alt="Tênis masculino Linha Select 019 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 019</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 019" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-020.jpg" alt="Tênis masculino Linha Select 020 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 020</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 020" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<!-- ===== 021 a 030 ===== -->
+<div class="card" data-genero="masculino"><img src="tenis-021.jpg" alt="Tênis masculino Linha Select 021 à venda em Aracaju SE KS Multimarcas"><h3>Linha Select · 021</h3><select class="select-numero"><option value="">Escolha o número</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option></select><button class="btn-carrinho" data-nome="Linha Select · 021" data-genero="Masculino">Adicionar ao carrinho</button></div>
+<div class="card" data-genero="masculino"><img src="tenis-022.jpg" alt="Tênis masculino Linha Select 022 à venda em Aracaju SE KS Multimarcas"><h3>Linha Select · 022</h3><select class="select-numero"><option value="">Escolha o número</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option></select><button class="btn-carrinho" data-nome="Linha Select · 022" data-genero="Masculino">Adicionar ao carrinho</button></div>
+<div class="card" data-genero="masculino"><img src="tenis-023.jpg" alt="Tênis masculino Linha Select 023 à venda em Aracaju SE KS Multimarcas"><h3>Linha Select · 023</h3><select class="select-numero"><option value="">Escolha o número</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option></select><button class="btn-carrinho" data-nome="Linha Select · 023" data-genero="Masculino">Adicionar ao carrinho</button></div>
+<div class="card" data-genero="masculino"><img src="tenis-024.jpg" alt="Tênis masculino Linha Select 024 à venda em Aracaju SE KS Multimarcas"><h3>Linha Select · 024</h3><select class="select-numero"><option value="">Escolha o número</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option></select><button class="btn-carrinho" data-nome="Linha Select · 024" data-genero="Masculino">Adicionar ao carrinho</button></div>
+<div class="card" data-genero="masculino"><img src="tenis-025.jpg" alt="Tênis masculino Linha Select 025 à venda em Aracaju SE KS Multimarcas"><h3>Linha Select · 025</h3><select class="select-numero"><option value="">Escolha o número</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option></select><button class="btn-carrinho" data-nome="Linha Select · 025" data-genero="Masculino">Adicionar ao carrinho</button></div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-026.jpg" alt="Tênis masculino Linha Select 026 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 026</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 026" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-027.jpg" alt="Tênis masculino Linha Select 027 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 027</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 027" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-028.jpg" alt="Tênis masculino Linha Select 028 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 028</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 028" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-029.jpg" alt="Tênis masculino Linha Select 029 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 029</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 029" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+
+<div class="card" data-genero="masculino">
+<img src="tenis-030.jpg" alt="Tênis masculino Linha Select 030 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 030</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 030" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-031.jpg" alt="Tênis masculino Linha Select 031 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 031</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 031" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-032.jpg" alt="Tênis masculino Linha Select 032 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 032</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 032" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-033.jpg" alt="Tênis masculino Linha Select 033 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 033</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 033" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-034.jpg" alt="Tênis masculino Linha Select 034 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 034</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 034" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-035.jpg" alt="Tênis masculino Linha Select 035 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 035</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 035" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-036.jpg" alt="Tênis masculino Linha Select 036 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 036</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 036" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-037.jpg" alt="Tênis masculino Linha Select 037 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 037</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 037" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-038.jpg" alt="Tênis masculino Linha Select 038 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 038</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 038" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-039.jpg" alt="Tênis masculino Linha Select 039 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 039</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 039" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-040.jpg" alt="Tênis masculino Linha Select 040 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 040</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 040" data-genero="Masculino">Adicionar ao carrinho</button>
+</div>
+<div class="card" data-genero="masculino">
+<img src="tenis-041.jpg" alt="Tênis masculino Linha Select 041 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 041</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 041" data-genero="Masculino">
+Adicionar ao carrinho
+</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-042.jpg" alt="Tênis masculino Linha Select 042 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 042</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 042" data-genero="Masculino">
+Adicionar ao carrinho
+</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-043.jpg" alt="Tênis masculino Linha Select 043 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 043</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 043" data-genero="Masculino">
+Adicionar ao carrinho
+</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-044.jpg" alt="Tênis masculino Linha Select 044 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 044</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 044" data-genero="Masculino">
+Adicionar ao carrinho
+</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-045.jpg" alt="Tênis masculino Linha Select 045 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 045</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 045" data-genero="Masculino">
+Adicionar ao carrinho
+</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-046.jpg" alt="Tênis masculino Linha Select 046 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 046</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 046" data-genero="Masculino">
+Adicionar ao carrinho
+</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-047.jpg" alt="Tênis masculino Linha Select 047 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 047</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 047" data-genero="Masculino">
+Adicionar ao carrinho
+</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-048.jpg" alt="Tênis masculino Linha Select 048 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 048</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 048" data-genero="Masculino">
+Adicionar ao carrinho
+</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-049.jpg" alt="Tênis masculino Linha Select 049 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 049</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 049" data-genero="Masculino">
+Adicionar ao carrinho
+</button>
+</div>
+
+<div class="card" data-genero="masculino">
+<img src="tenis-050.jpg" alt="Tênis masculino Linha Select 050 à venda em Aracaju SE KS Multimarcas">
+<h3>Linha Select · 050</h3>
+<select class="select-numero">
+<option value="">Escolha o número</option>
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
+</select>
+<button class="btn-carrinho" data-nome="Linha Select · 050" data-genero="Masculino">
+Adicionar ao carrinho
+</button>
+</div>
+
+
 </main>
-<!-- CARRINHO LATERAL -->
+
+<!-- CARRINHO -->
 <div class="cart-sidebar" id="cartSidebar">
     <div class="cart-header">
         <h3>Seu carrinho</h3>
         <button id="closeCart">✖</button>
     </div>
-
     <div class="cart-items" id="cartItems"></div>
-
     <div class="cart-footer">
         <button id="consultarBtn">Consultar disponibilidade</button>
     </div>
 </div>
-<!-- BOTÃO WHATSAPP -->
-<a href="https://wa.me/557999295629" class="whatsapp" target="_blank">
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/557999295629" class="whatsapp" target="_blank" aria-label="WhatsApp KS Multimarcas AJU">
     <i class="fa-brands fa-whatsapp"></i>
 </a>
 
 <footer>
-    <p>© 2026 KS Multimarcas AJU</p>
-    <p>Todos os direitos reservados</p>
+    <p>© 2026 KS Multimarcas AJU – Loja de tênis em Aracaju SE</p>
+    <p>Atendimento via WhatsApp</p>
 </footer>
 
-<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>

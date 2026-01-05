@@ -265,4 +265,5 @@ footer {
 .seo-h1 {
     position: absolute;
     left: -9999px;
+    font-size: 5px;
 }

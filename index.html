@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <!-- SEO LOCAL -->
-    <title>Tênis em Aracaju | KS Multimarcas AJU</title>
-    <meta name="description" content="Loja de tênis em Aracaju SE. Tênis masculinos, femininos e unissex. Consulte disponibilidade pelo WhatsApp. KS Multimarcas AJU.">
-    <meta name="keywords" content="tênis em Aracaju, loja de tênis Aracaju, tênis masculino Aracaju, tênis feminino Aracaju, tênis unissex Aracaju, multimarcas Aracaju">
-    <meta name="author" content="KS Multimarcas AJU">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- SEO AVANÇADO -->
+<!-- SEO LOCAL -->
+<title>Tênis em Aracaju | KS Multimarcas AJU</title>
+<meta name="description" content="Loja de tênis em Aracaju SE. Tênis masculinos, femininos e unissex. Consulte disponibilidade pelo WhatsApp. KS Multimarcas AJU.">
+<meta name="keywords" content="tênis em Aracaju, loja de tênis Aracaju, tênis masculino Aracaju, tênis feminino Aracaju, tênis unissex Aracaju">
+<meta name="author" content="KS Multimarcas AJU">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.ksmultimarcasaju.com.br/">
 
 <!-- OPEN GRAPH -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tênis em Aracaju | KS Multimarcas AJU">
-<meta property="og:description" content="Loja de tênis em Aracaju SE. Modelos masculinos, femininos e unissex. Consulte disponibilidade pelo WhatsApp.">
+<meta property="og:description" content="Loja de tênis em Aracaju SE. Modelos masculinos, femininos e unissex.">
 <meta property="og:url" content="https://www.ksmultimarcasaju.com.br/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:image" content="https://www.ksmultimarcasaju.com.br/preview.jpg">
@@ -24,29 +23,38 @@
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Tênis em Aracaju | KS Multimarcas AJU">
-<meta name="twitter:description" content="Loja de tênis em Aracaju SE. Atendimento rápido via WhatsApp.">
+<meta name="twitter:description" content="Loja de tênis em Aracaju SE. Atendimento via WhatsApp.">
 <meta name="twitter:image" content="https://www.ksmultimarcasaju.com.br/preview.jpg">
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- SCHEMA LOCAL BUSINESS -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ShoeStore",
+  "name": "KS Multimarcas AJU",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Aracaju",
+    "addressRegion": "SE",
+    "addressCountry": "BR"
+  },
+  "url": "https://www.ksmultimarcasaju.com.br",
+  "sameAs": [
+    "https://wa.me/557999295629"
+  ]
+}
+</script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
 <header>
-  <h1 style="position:absolute; left:-9999px;">
-Loja de tênis em Aracaju SE – KS Multimarcas AJU
-</h1>
-
-<section style="position:absolute; left:-9999px;">
-  <p>
-    A KS Multimarcas AJU é uma loja especializada em tênis em Aracaju SE,
-    oferecendo modelos masculinos, femininos e unissex.
-    Trabalhamos com revenda, por isso a disponibilidade de numeração é consultada
-    diretamente pelo WhatsApp.
-  </p>
-</section>
     <div class="logo">KS Multimarcas AJU</div>
 
     <div class="icons-header">
@@ -69,6 +77,17 @@ Loja de tênis em Aracaju SE – KS Multimarcas AJU
     </nav>
 </header>
 
+<main>
+
+<!-- SEO VISÍVEL -->
+<section class="seo-text">
+    <h1 class="seo-h1">
+  Sneakers Masculinos, Femininos e Unissex em Aracaju
+</h1>
+    
+</section>
+
+<!-- FILTROS -->
 <section class="filtros">
     <select id="filtroGenero">
         <option value="todos">Todos</option>
@@ -77,10 +96,11 @@ Loja de tênis em Aracaju SE – KS Multimarcas AJU
         <option value="unissex">Unissex</option>
     </select>
 </section>
+
+<!-- PRODUTOS -->
 <section class="produtos" id="lista-produtos"></section>
 
-<script src="produtos.js"></script>
-
+</main>
 
 <!-- CARRINHO -->
 <div class="cart-sidebar" id="cartSidebar">
@@ -104,6 +124,7 @@ Loja de tênis em Aracaju SE – KS Multimarcas AJU
     <p>Atendimento via WhatsApp</p>
 </footer>
 
+<script src="produtos.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

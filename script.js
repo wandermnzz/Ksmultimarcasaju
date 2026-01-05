@@ -10,15 +10,14 @@ menuToggle.addEventListener("click", () => {
 /* ===== FILTROS ===== */
 const filtroGenero = document.getElementById("filtroGenero");
 const filtroNumero = document.getElementById("filtroNumero");
-const cards = document.querySelectorAll(".card");
 
 function aplicarFiltros() {
     const genero = filtroGenero.value;
     const numero = filtroNumero.value;
 
-    cards.forEach(card => {
+    document.querySelectorAll(".card").forEach(card => {
         const cardGenero = card.getAttribute("data-genero");
-        const cardNumero = card.getAttribute("data-numero");
+        const selectNumero = card.querySelector(".select-numero");
 
         let mostrar = true;
 
@@ -26,8 +25,10 @@ function aplicarFiltros() {
             mostrar = false;
         }
 
-        if (numero !== "todos" && cardNumero !== numero) {
-            mostrar = false;
+        if (numero !== "todos") {
+            if (!selectNumero || !selectNumero.querySelector(`option[value="${numero}"]`)) {
+                mostrar = false;
+            }
         }
 
         card.style.display = mostrar ? "block" : "none";
@@ -37,13 +38,13 @@ function aplicarFiltros() {
 filtroGenero.addEventListener("change", aplicarFiltros);
 filtroNumero.addEventListener("change", aplicarFiltros);
 
-/* ===== CARRINHO AVANÇADO ===== */
-/* ===== CARRINHO AVANÇADO ===== */
+/* ===== CARRINHO ===== */
 const cartSidebar = document.getElementById("cartSidebar");
 const cartItems = document.getElementById("cartItems");
 const closeCart = document.getElementById("closeCart");
 const consultarBtn = document.getElementById("consultarBtn");
 const cartIcon = document.querySelector(".cart-container");
+const cartCount = document.getElementById("cartCount");
 
 let carrinho = [];
 
@@ -56,27 +57,35 @@ closeCart.addEventListener("click", () => {
     cartSidebar.classList.remove("active");
 });
 
-/* ADICIONAR PRODUTO */
-document.querySelectorAll(".btn-carrinho").forEach(btn => {
-    btn.addEventListener("click", () => {
+/* ===== EVENT DELEGATION (FUNCIONA COM PRODUTOS SEPARADOS) ===== */
+document.addEventListener("click", function (e) {
 
-        const card = btn.closest(".card");
+    /* ADICIONAR AO CARRINHO */
+    if (e.target.classList.contains("btn-carrinho")) {
+
+        const card = e.target.closest(".card");
         const selectNumero = card.querySelector(".select-numero");
-        const numero = selectNumero.value;
+        const numero = selectNumero ? selectNumero.value : "";
 
         if (numero === "") {
-            alert("Por favor, escolha a numeração.");
+            alert("Escolha o número antes de adicionar ao carrinho.");
             return;
         }
 
-        const nome = btn.dataset.nome;
-        const genero = btn.dataset.genero;
+        const nome = e.target.dataset.nome;
+        const genero = e.target.dataset.genero;
 
         carrinho.push({ nome, numero, genero });
 
-        document.getElementById("cartCount").textContent = carrinho.length;
         atualizarCarrinho();
-    });
+    }
+
+    /* REMOVER ITEM */
+    if (e.target.classList.contains("remove-item")) {
+        const index = e.target.dataset.index;
+        carrinho.splice(index, 1);
+        atualizarCarrinho();
+    }
 });
 
 /* ATUALIZAR CARRINHO */
@@ -84,27 +93,18 @@ function atualizarCarrinho() {
     cartItems.innerHTML = "";
 
     carrinho.forEach((item, index) => {
-        const div = document.createElement("div");
-        div.classList.add("cart-item");
-
-        div.innerHTML = `
-            <strong>${item.nome}</strong><br>
-            Número: ${item.numero}<br>
-            ${item.genero}<br>
-            <button class="remove-item" onclick="removerItem(${index})">
-                Remover
-            </button>
+        cartItems.innerHTML += `
+            <div class="cart-item">
+                <strong>${item.nome}</strong><br>
+                Nº ${item.numero} • ${item.genero}<br>
+                <button class="remove-item" data-index="${index}">
+                    Remover
+                </button>
+            </div>
         `;
-
-        cartItems.appendChild(div);
     });
-}
 
-/* REMOVER ITEM */
-function removerItem(index) {
-    carrinho.splice(index, 1);
-    document.getElementById("cartCount").textContent = carrinho.length;
-    atualizarCarrinho();
+    cartCount.textContent = carrinho.length;
 }
 
 /* CONSULTAR DISPONIBILIDADE */
@@ -120,6 +120,6 @@ consultarBtn.addEventListener("click", () => {
         mensagem += `• ${item.nome} - Nº ${item.numero} (${item.genero})%0A`;
     });
 
-    const telefone = "557999295629"; // troque pelo número real
+    const telefone = "557999295629";
     window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
 });

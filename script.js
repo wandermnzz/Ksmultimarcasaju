@@ -1,126 +1,121 @@
 
-/* ===== MENU HAMBURGUER ===== */
-const menuToggle = document.getElementById("menuToggle");
-const menu = document.getElementById("menu");
+document.addEventListener("DOMContentLoaded", () => {
 
-menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("active");
-    menu.classList.toggle("active");
-});
+    /* ===== MENU ===== */
+    const menuToggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("menu");
 
-/* ===== FILTROS ===== */
-const filtroGenero = document.getElementById("filtroGenero");
-const filtroNumero = document.getElementById("filtroNumero");
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active");
+            menu.classList.toggle("active");
+        });
+    }
 
-function aplicarFiltros() {
-    const genero = filtroGenero.value;
-    const numero = filtroNumero.value;
+    /* ===== FILTRO GÊNERO ===== */
+    const filtroGenero = document.getElementById("filtroGenero");
 
-    document.querySelectorAll(".card").forEach(card => {
-        const cardGenero = card.getAttribute("data-genero");
-        const selectNumero = card.querySelector(".select-numero");
+    function aplicarFiltros() {
+        const genero = filtroGenero.value;
 
-        let mostrar = true;
+        document.querySelectorAll(".card").forEach(card => {
+            const cardGenero = card.dataset.genero;
+            card.style.display =
+                genero === "todos" || cardGenero === genero
+                    ? "block"
+                    : "none";
+        });
+    }
 
-        if (genero !== "todos" && cardGenero !== genero) {
-            mostrar = false;
-        }
+    if (filtroGenero) {
+        filtroGenero.addEventListener("change", aplicarFiltros);
+    }
 
-        if (numero !== "todos") {
-            if (!selectNumero || !selectNumero.querySelector(`option[value="${numero}"]`)) {
-                mostrar = false;
+    /* ===== CARRINHO ===== */
+    const cartSidebar = document.getElementById("cartSidebar");
+    const cartItems = document.getElementById("cartItems");
+    const closeCart = document.getElementById("closeCart");
+    const consultarBtn = document.getElementById("consultarBtn");
+    const cartIcon = document.querySelector(".cart-container");
+    const cartCount = document.getElementById("cartCount");
+
+    let carrinho = [];
+
+    if (cartIcon && cartSidebar) {
+        cartIcon.addEventListener("click", () => {
+            cartSidebar.classList.add("active");
+        });
+    }
+
+    if (closeCart) {
+        closeCart.addEventListener("click", () => {
+            cartSidebar.classList.remove("active");
+        });
+    }
+
+    /* ===== EVENT DELEGATION ===== */
+    document.addEventListener("click", (e) => {
+
+        if (e.target.classList.contains("btn-carrinho")) {
+            const card = e.target.closest(".card");
+            const selectNumero = card.querySelector(".select-numero");
+            const numero = selectNumero.value;
+
+            if (!numero) {
+                alert("Escolha o número.");
+                return;
             }
+
+            carrinho.push({
+                nome: e.target.dataset.nome,
+                genero: e.target.dataset.genero,
+                numero
+            });
+
+            atualizarCarrinho();
         }
 
-        card.style.display = mostrar ? "block" : "none";
-    });
-}
-
-filtroGenero.addEventListener("change", aplicarFiltros);
-filtroNumero.addEventListener("change", aplicarFiltros);
-
-/* ===== CARRINHO ===== */
-const cartSidebar = document.getElementById("cartSidebar");
-const cartItems = document.getElementById("cartItems");
-const closeCart = document.getElementById("closeCart");
-const consultarBtn = document.getElementById("consultarBtn");
-const cartIcon = document.querySelector(".cart-container");
-const cartCount = document.getElementById("cartCount");
-
-let carrinho = [];
-
-/* ABRIR / FECHAR CARRINHO */
-cartIcon.addEventListener("click", () => {
-    cartSidebar.classList.add("active");
-});
-
-closeCart.addEventListener("click", () => {
-    cartSidebar.classList.remove("active");
-});
-
-/* ===== EVENT DELEGATION (FUNCIONA COM PRODUTOS SEPARADOS) ===== */
-document.addEventListener("click", function (e) {
-
-    /* ADICIONAR AO CARRINHO */
-    if (e.target.classList.contains("btn-carrinho")) {
-
-        const card = e.target.closest(".card");
-        const selectNumero = card.querySelector(".select-numero");
-        const numero = selectNumero ? selectNumero.value : "";
-
-        if (numero === "") {
-            alert("Escolha o número antes de adicionar ao carrinho.");
-            return;
+        if (e.target.classList.contains("remove-item")) {
+            const index = e.target.dataset.index;
+            carrinho.splice(index, 1);
+            atualizarCarrinho();
         }
-
-        const nome = e.target.dataset.nome;
-        const genero = e.target.dataset.genero;
-
-        carrinho.push({ nome, numero, genero });
-
-        atualizarCarrinho();
-    }
-
-    /* REMOVER ITEM */
-    if (e.target.classList.contains("remove-item")) {
-        const index = e.target.dataset.index;
-        carrinho.splice(index, 1);
-        atualizarCarrinho();
-    }
-});
-
-/* ATUALIZAR CARRINHO */
-function atualizarCarrinho() {
-    cartItems.innerHTML = "";
-
-    carrinho.forEach((item, index) => {
-        cartItems.innerHTML += `
-            <div class="cart-item">
-                <strong>${item.nome}</strong><br>
-                Nº ${item.numero} • ${item.genero}<br>
-                <button class="remove-item" data-index="${index}">
-                    Remover
-                </button>
-            </div>
-        `;
     });
 
-    cartCount.textContent = carrinho.length;
-}
+    function atualizarCarrinho() {
+        cartItems.innerHTML = "";
 
-/* CONSULTAR DISPONIBILIDADE */
-consultarBtn.addEventListener("click", () => {
-    if (carrinho.length === 0) {
-        alert("Seu carrinho está vazio.");
-        return;
+        carrinho.forEach((item, index) => {
+            cartItems.innerHTML += `
+                <div class="cart-item">
+                    <strong>${item.nome}</strong><br>
+                    Nº ${item.numero} • ${item.genero}<br>
+                    <button class="remove-item" data-index="${index}">
+                        Remover
+                    </button>
+                </div>
+            `;
+        });
+
+        cartCount.textContent = carrinho.length;
     }
 
-    let mensagem = "Olá! Gostaria de consultar a disponibilidade dos seguintes tênis:%0A%0A";
+    if (consultarBtn) {
+        consultarBtn.addEventListener("click", () => {
+            if (!carrinho.length) {
+                alert("Carrinho vazio");
+                return;
+            }
 
-    carrinho.forEach(item => {
-        mensagem += `• ${item.nome} - Nº ${item.numero} (${item.genero})%0A`;
-    });
+            let msg = "Olá! Gostaria de consultar:%0A%0A";
+            carrinho.forEach(i => {
+                msg += `• ${i.nome} - Nº ${i.numero} (${i.genero})%0A`;
+            });
 
-    const telefone = "557999295629";
-    window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
+            window.open(
+                `https://wa.me/557999295629?text=${msg}`,
+                "_blank"
+            );
+        });
+    }
 });

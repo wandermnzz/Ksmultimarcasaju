@@ -14,7 +14,7 @@
 body {
     background-color: #f5f0e6;
     color: #3a2f2a;
-    padding-top: var(--altura-header);
+    padding-top: 80px;
 }
 
 /* ===== HEADER FIXO ===== */
@@ -108,13 +108,14 @@ nav a {
 
 /* ===== FILTROS (AGORA VISÍVEL) ===== */
 .filtros {
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 15px;
     display: flex;
     justify-content: center;
     gap: 10px;
     background: #f5f0e6;
-    z-index: 10;
+    z-index: 1;
+    position: relative;
 }
 
 .filtros select {

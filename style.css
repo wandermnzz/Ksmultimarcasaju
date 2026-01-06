@@ -231,7 +231,7 @@ nav a {
     position: fixed;
     bottom: 20px;
     right: 20px;
-
+    text-decoration: none;
     width: 56px;
     height: 56px;
 
@@ -268,7 +268,16 @@ footer {
     left: -9999px;
     font-size: 5px;
 }
-
+#consultarBtn {
+    width: 100%;
+    padding: 10px;
+    background: #25d366;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
 
